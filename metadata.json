@@ -1,0 +1,8 @@
+
+{
+  "name": "Dorsis Girma Portfolio",
+  "description": "A futuristic portfolio for a full-stack developer and security analyst, featuring Gemini Live and AI Image generation.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
