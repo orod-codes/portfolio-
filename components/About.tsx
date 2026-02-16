@@ -1,5 +1,7 @@
 
 import React from 'react';
+import '../circular-orbit.css';
+import headshotUrl from '../photo_2026-02-16_09-36-25__1_-removebg-preview.png';
 
 const About: React.FC = () => {
   return (
@@ -7,19 +9,84 @@ const About: React.FC = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 md:gap-20 items-center">
           <div className="relative order-2 lg:order-1">
-            <div className="aspect-square glass rounded-[2.5rem] md:rounded-[3rem] overflow-hidden shadow-2xl border-slate-200 dark:border-white/10 group">
-              <img 
-                src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2070&auto=format&fit=crop" 
-                alt="System Engineering" 
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100 opacity-80 group-hover:opacity-100"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-200/50 dark:from-black via-transparent to-transparent opacity-60"></div>
+            <div className="pointer-events-none absolute -inset-10">
+              <div className="absolute inset-6 rounded-full border border-slate-200/60 dark:border-white/10 animate-[spin_22s_linear_infinite]"></div>
+              <div className="absolute inset-12 rounded-full border border-slate-200/40 dark:border-white/10 animate-[spin_14s_linear_infinite]"></div>
+              <div className="absolute inset-2 rounded-full border border-slate-200/30 dark:border-white/5 animate-[spin_28s_linear_infinite]"></div>
+
+              <div className="absolute inset-0 animate-[spin_24s_linear_infinite]">
+                <div className="absolute left-1/2 -top-3 h-2 w-2 -translate-x-1/2 rounded-full bg-slate-300 dark:bg-white/30"></div>
+                <div className="absolute right-0 top-1/2 h-2 w-2 -translate-y-1/2 rounded-full bg-slate-300 dark:bg-white/30"></div>
+                <div className="absolute left-1/2 -bottom-3 h-2 w-2 -translate-x-1/2 rounded-full bg-slate-300 dark:bg-white/30"></div>
+                <div className="absolute left-0 top-1/2 h-2 w-2 -translate-y-1/2 rounded-full bg-slate-300 dark:bg-white/30"></div>
+              </div>
+
+              <div className="absolute inset-0 animate-[spin_26s_linear_infinite]">
+                <div className="absolute left-1/2 -top-6 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full bg-white/80 text-slate-700 shadow-md ring-1 ring-slate-200/70">
+                  <i className="fab fa-react text-lg"></i>
+                </div>
+                <div className="absolute right-2 top-8 flex h-9 w-9 items-center justify-center rounded-full bg-white/80 text-slate-700 shadow-md ring-1 ring-slate-200/70">
+                  <i className="fab fa-js text-base"></i>
+                </div>
+                <div className="absolute left-6 bottom-2 flex h-10 w-10 items-center justify-center rounded-full bg-white/80 text-slate-700 shadow-md ring-1 ring-slate-200/70">
+                  <i className="fab fa-node-js text-lg"></i>
+                </div>
+                <div className="absolute -left-2 top-10 flex h-9 w-9 items-center justify-center rounded-full bg-white/80 text-slate-700 shadow-md ring-1 ring-slate-200/70">
+                  <i className="fab fa-github text-base"></i>
+                </div>
+              </div>
             </div>
-            <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 glass p-5 md:p-8 rounded-2xl shadow-2xl border border-slate-200 dark:border-white/20 hidden sm:block">
-              <p className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white">LTS</p>
-              <p className="text-slate-500 dark:text-gray-500 font-bold text-[10px] uppercase tracking-widest">Support Mindset</p>
+            <div className="aspect-square w-[22rem] h-[22rem] md:w-[36rem] md:h-[36rem] rounded-[2.5rem] md:rounded-[3rem] overflow-hidden group relative">
+              <div className="pointer-events-none absolute inset-0 z-0">
+                {/* Blurred color gradients for modern tech look */}
+                <div className="absolute -top-10 -left-10 w-40 h-40 rounded-full bg-gradient-to-br from-cyan-400/40 via-blue-300/30 to-transparent blur-2xl"></div>
+                <div className="absolute -bottom-12 -right-8 w-48 h-48 rounded-full bg-gradient-to-tr from-fuchsia-400/40 via-amber-200/30 to-transparent blur-3xl rotate-6"></div>
+                <div className="absolute top-1/2 left-1/2 w-32 h-32 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-emerald-300/30 via-cyan-200/20 to-transparent blur-2xl"></div>
+
+                {/* Minimal floating icons */}
+                <div className="absolute top-8 left-8 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-cyan-500 shadow ring-1 ring-cyan-200 animate-float-slow">
+                  <i className="fab fa-react text-lg"></i>
+                </div>
+                <div className="absolute bottom-10 right-10 flex h-7 w-7 items-center justify-center rounded-full bg-white/90 text-yellow-500 shadow ring-1 ring-yellow-200 animate-float-medium">
+                  <i className="fab fa-js text-base"></i>
+                </div>
+                <div className="absolute top-12 right-16 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-green-500 shadow ring-1 ring-green-200 animate-float-fast">
+                  <i className="fab fa-node-js text-lg"></i>
+                </div>
+                <div className="absolute bottom-8 left-12 flex h-7 w-7 items-center justify-center rounded-full bg-white/90 text-indigo-500 shadow ring-1 ring-indigo-200 animate-float-medium">
+                  <i className="fab fa-python text-base"></i>
+                </div>
+                <div className="absolute top-1/2 right-4 flex h-7 w-7 items-center justify-center rounded-full bg-white/90 text-pink-500 shadow ring-1 ring-pink-200 animate-float-slow">
+                  <i className="fab fa-html5 text-base"></i>
+                </div>
+              </div>
+                <img 
+                  src={headshotUrl}
+                  alt="Dorsis Girma" 
+                  className="relative z-10 w-full h-full object-contain object-bottom transition-all duration-1000 opacity-90 rounded-full"
+                />
+                {/* Animate JS, GitHub, and React icons in a true circular orbit, only around the photo */}
+                <div className="absolute left-0 top-0 w-full h-full pointer-events-none">
+                  <span className="absolute js-orbit" style={{transform:'translate(-50%, -50%)'}}>
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-yellow-500 ring-1 ring-yellow-200 shadow">
+                      <i className="fab fa-js text-base"></i>
+                    </span>
+                  </span>
+                  <span className="absolute react-orbit" style={{transform:'translate(-50%, -50%)'}}>
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-sky-500 ring-1 ring-sky-200 shadow">
+                      <i className="fab fa-react text-base"></i>
+                    </span>
+                  </span>
+                  <span className="absolute github-orbit" style={{transform:'translate(-50%, -50%)'}}>
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-slate-700 ring-1 ring-slate-300 shadow">
+                      <i className="fab fa-github text-base"></i>
+                    </span>
+                  </span>
+                </div>
+                <div className="absolute inset-0 z-20 bg-gradient-to-t from-slate-200/50 via-transparent to-transparent opacity-60"></div>
+              </div>
             </div>
-          </div>
+              {/* Add keyframes for orbiting motion in tailwind.config.js or via global CSS */}
 
           <div className="order-1 lg:order-2">
             <div className="inline-block px-4 py-1.5 mb-6 glass border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white text-[9px] md:text-[10px] font-black tracking-[0.3em] uppercase rounded-full">
@@ -30,11 +97,13 @@ const About: React.FC = () => {
             </h2>
             <div className="space-y-6 text-slate-600 dark:text-gray-400 leading-relaxed text-base md:text-lg">
               <p>
-                I'm <span className="font-bold text-slate-900 dark:text-white">Dorsis Girma</span>. 
-                My focus is the backbone of the digital world: <span className="text-slate-900 dark:text-white italic underline decoration-blue-500/20 underline-offset-4 font-medium">Systems and the Web.</span>
+                I’m <span className="font-bold text-slate-900 dark:text-white">Dorsis Girma</span>, a student at <span className="font-bold text-blue-600 dark:text-blue-400">Addis Ababa University</span> majoring in Electrical and Computer Engineering (2024–present, currently 5th year).
               </p>
               <p>
-                As a software engineer at <span className="text-slate-900 dark:text-white font-bold">INSA</span>, I work on high-stakes systems where performance and security are non-negotiable. My philosophy is rooted in clean code, efficient algorithms, and robust architecture.
+                I work as a Full Stack Developer and System Architect at <span className="text-slate-900 dark:text-white font-bold">Ayrab Tech Solution</span>, and as a Software Engineer (Systems) at <span className="text-slate-900 dark:text-white font-bold">INSA</span> (Information Network Security Administration), building robust web applications, scalable backend systems, and secure infrastructure.
+              </p>
+              <p>
+                My focus is on secure, scalable systems, system architecture, database design, and performance optimization—building solutions that last.
               </p>
             </div>
 
@@ -57,7 +126,14 @@ const About: React.FC = () => {
                  <div className="w-10 h-10 rounded-full border border-slate-200 dark:border-white/20 flex items-center justify-center text-slate-900 dark:text-white">
                     <i className="fab fa-github text-lg"></i>
                  </div>
-                 <span className="text-[10px] font-mono text-slate-500 dark:text-gray-500">@dorsis-girma</span>
+                 <a
+                   href="https://github.com/orod-codes"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="text-[10px] font-mono text-blue-600 dark:text-blue-400 hover:underline"
+                 >
+                   @orod-codes
+                 </a>
               </div>
             </div>
           </div>

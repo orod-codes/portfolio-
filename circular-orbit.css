@@ -1,0 +1,34 @@
+@keyframes js-circular-orbit {
+  0% { left: 50%; top: 10%; }
+  33% { left: 85%; top: 50%; }
+  66% { left: 15%; top: 50%; }
+  100% { left: 50%; top: 10%; }
+}
+@keyframes react-circular-orbit {
+  0% { left: 85%; top: 50%; }
+  33% { left: 15%; top: 50%; }
+  66% { left: 50%; top: 10%; }
+  100% { left: 85%; top: 50%; }
+}
+@keyframes github-circular-orbit {
+  0% { left: 15%; top: 50%; }
+  33% { left: 50%; top: 10%; }
+  66% { left: 85%; top: 50%; }
+  100% { left: 15%; top: 50%; }
+}
+
+.js-orbit {
+  animation: js-circular-orbit 12s linear infinite;
+  left: 50%;
+  top: 10%;
+}
+.react-orbit {
+  animation: react-circular-orbit 12s linear infinite;
+  left: 85%;
+  top: 50%;
+}
+.github-orbit {
+  animation: github-circular-orbit 12s linear infinite;
+  left: 15%;
+  top: 50%;
+}

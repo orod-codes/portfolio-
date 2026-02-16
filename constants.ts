@@ -13,22 +13,24 @@ export const SERVICES: Service[] = [
 export const SKILLS: Skill[] = [
   { id: 1, title: 'React', description: 'Advanced UI component architecture and state management.', icon: 'fa-brands fa-react', color: '#61DAFB' },
   { id: 2, title: 'Node.js', description: 'Scalable backend services and real-time event loops.', icon: 'fa-brands fa-node-js', color: '#339933' },
-  { id: 3, title: 'TypeScript', description: 'Strictly typed JavaScript for enterprise-grade safety.', icon: 'fa-code', color: '#3178C6' },
+  { id: 3, title: 'TypeScript', description: 'Strictly typed JavaScript for enterprise-grade safety.', icon: 'svg-typescript', color: '#3178C6' },
   { id: 4, title: 'Python', description: 'Data processing, automation scripts, and rapid prototyping.', icon: 'fa-brands fa-python', color: '#3776AB' },
-  { id: 5, title: 'C Programming', description: 'Low-level memory management and system-level performance.', icon: 'fa-terminal', color: '#A8B9CC' },
-  { id: 6, title: 'C++', description: 'High-performance computing and systems architecture.', icon: 'fa-code', color: '#00599C' },
+  { id: 5, title: 'C Programming', description: 'Low-level memory management and system-level performance.', icon: 'svg-c', color: '#A8B9CC' },
+  { id: 6, title: 'C++', description: 'High-performance computing and systems architecture.', icon: 'svg-cpp', color: '#00599C' },
   { id: 7, title: 'Rust', description: 'Memory-safe systems programming and WASM high-speed tools.', icon: 'fa-brands fa-rust', color: '#DEA584' },
   { id: 8, title: 'Go', description: 'Concurrent backend services and cloud-native toolsets.', icon: 'fa-brands fa-golang', color: '#00ADD8' },
   { id: 9, title: 'Java', description: 'Enterprise-grade backend systems and JVM optimization.', icon: 'fa-brands fa-java', color: '#007396' },
-  { id: 10, title: 'PostgreSQL', description: 'Relational data modeling and complex query optimization.', icon: 'fa-database', color: '#4169E1' },
+  { id: 10, title: 'PostgreSQL', description: 'Relational data modeling and complex query optimization.', icon: 'svg-postgresql', color: '#4169E1' },
   { id: 11, title: 'Docker', description: 'Containerization for consistent deployment environments.', icon: 'fa-brands fa-docker', color: '#2496ED' },
   { id: 12, title: 'AWS', description: 'Cloud infrastructure management and serverless scaling.', icon: 'fa-brands fa-aws', color: '#FF9900' },
 ];
 
 export const EXPERIENCES: Experience[] = [
-  { id: 1, role: 'Software Engineer (Systems)', company: 'INSA', date: 'Present', description: 'Developing low-level analysis tools and secure systems for national infrastructure protection.', icon: 'fa-briefcase' },
-  { id: 2, role: 'B.E. Software Engineering', company: 'Adama Science & Tech University', date: 'Oct 2024 - Present', description: 'Advancing academic research in system architecture and algorithmic efficiency.', icon: 'fa-graduation-cap' },
-  { id: 3, role: 'Full Stack Developer', company: 'Bonny Pictures', date: 'Nov 2025 - Present', description: 'Engineered a comprehensive studio management system and automated backend workflows.', icon: 'fa-clapperboard' },
+  { id: 3, role: 'B.Sc. Electrical and Computer Engineering', company: 'Addis Ababa University', date: '2024 - Present', description: 'Currently a 5th year student, focusing on electrical and computer engineering fundamentals and research.', icon: 'fa-graduation-cap' },
+  { id: 2, role: 'Software Engineer (Systems)', company: 'INSA', date: 'Present', description: 'Developing secure systems and infrastructure for national projects.', icon: 'fa-shield-halved' },
+  { id: 5, role: 'Scholarship System Developer & Admin', company: 'BUNA', date: 'Present', description: 'Developing and administering the BUNA scholarship management system.', icon: 'fa-graduation-cap' },
+  { id: 1, role: 'Full Stack Developer & System Architect', company: 'Ayrab Tech Solution', date: 'Present', description: 'Building robust web applications and scalable backend systems for business and education.', icon: 'fa-briefcase' },
+  { id: 4, role: 'Freelance Developer & Consultant', company: 'Tech Plus Engineering', date: 'Present', description: 'Freelancing and consulting on projects related to software development and engineering.', icon: 'fa-user-gear' },
 ];
 
 export const PROJECTS: Project[] = [

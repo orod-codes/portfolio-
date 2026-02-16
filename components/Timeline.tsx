@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { EXPERIENCES } from '../constants';
+import { TECH_LOGOS } from './TechStack';
 
 const Timeline: React.FC = () => {
   const [glitchText, setGlitchText] = useState("0x000000");
@@ -85,6 +86,33 @@ const Timeline: React.FC = () => {
                       <h4 className="text-xs font-bold text-slate-400 dark:text-gray-400 mb-6 uppercase tracking-[0.2em] flex items-center gap-2">
                         <i className="fas fa-microchip text-[10px] opacity-50"></i>
                         {exp.company}
+                        {exp.company === 'INSA' && (
+                          <a href="https://www.insa.gov.et/" target="_blank" rel="noopener noreferrer">
+                            <img
+                              src={TECH_LOGOS['INSA']}
+                              alt="INSA Logo"
+                              className="w-16 h-16 md:w-24 md:h-24 ml-2 inline-block align-middle rounded-full border-2 border-slate-200 dark:border-white/20 bg-white dark:bg-slate-900"
+                            />
+                          </a>
+                        )}
+                        {exp.company === 'BUNA' && (
+                          <a href="https://bunasm.com/" target="_blank" rel="noopener noreferrer">
+                            <img
+                              src={TECH_LOGOS['BUNA']}
+                              alt="BUNA Logo"
+                              className="w-24 h-24 md:w-32 md:h-32 ml-2 inline-block align-middle rounded-full border-2 border-slate-200 dark:border-white/20 bg-white dark:bg-slate-900"
+                            />
+                          </a>
+                        )}
+                        {exp.company === 'Addis Ababa University' && (
+                          <a href="https://www.aau.edu.et/" target="_blank" rel="noopener noreferrer">
+                            <img
+                              src={TECH_LOGOS['Addis Ababa University']}
+                              alt="Addis Ababa University Logo"
+                              className="w-24 h-24 md:w-32 md:h-32 ml-2 inline-block align-middle rounded-full border-2 border-slate-200 dark:border-white/20 bg-white dark:bg-slate-900"
+                            />
+                          </a>
+                        )}
                       </h4>
                       <p className={`text-slate-500 dark:text-gray-400 text-sm leading-relaxed font-light max-w-md ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
                         {exp.description}
@@ -126,11 +154,23 @@ const Timeline: React.FC = () => {
       </div>
 
       {/* SECTION BOTTOM ACCENT */}
-      <div className="max-w-6xl mx-auto mt-20 md:mt-40 flex justify-center">
-         <div className="glass px-6 py-3 rounded-full border border-slate-200 dark:border-white/10 flex items-center gap-4">
-            <div className="w-1.5 h-1.5 bg-blue-500 rounded-full animate-pulse"></div>
-            <span className="text-[10px] font-mono uppercase tracking-[0.2em] opacity-50">End of Temporal Registry</span>
-         </div>
+      <div className="max-w-6xl mx-auto mt-20 md:mt-40 flex flex-col items-center gap-4">
+        <div className="glass px-6 py-3 rounded-full border border-slate-200 dark:border-white/10 flex items-center gap-4">
+          <div className="w-1.5 h-1.5 bg-blue-500 rounded-full animate-pulse"></div>
+          <span className="text-[10px] font-mono uppercase tracking-[0.2em] opacity-50">End of Temporal Registry</span>
+        </div>
+         <a
+           href="https://t.me/codewithme_tech"
+           target="_blank"
+           rel="noopener noreferrer"
+           className="flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-blue-600 via-cyan-500 to-indigo-600 text-white font-bold text-base uppercase tracking-widest shadow-lg border border-blue-200 dark:border-blue-900 relative overflow-hidden group hover:scale-105 transition-all duration-300"
+           style={{boxShadow: '0 4px 32px 0 rgba(0,120,255,0.10)'}}
+         >
+           <span className="flex items-center justify-center w-10 h-10 mr-2 rounded-full bg-white/10 border border-blue-300 dark:border-blue-800 shadow-inner">
+             <i className="fab fa-telegram-plane text-2xl text-white group-hover:text-cyan-300 transition-colors duration-300"></i>
+           </span>
+           <span className="z-10 drop-shadow-sm tracking-wider">Follow my journey on Telegram</span>
+         </a>
       </div>
     </section>
   );

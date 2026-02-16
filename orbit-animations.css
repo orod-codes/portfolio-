@@ -1,0 +1,33 @@
+@keyframes orbit-js {
+  0% { left: 50%; top: 6%; }
+  25% { left: 68%; top: 10%; }
+  50% { left: 83%; top: 18%; }
+  75% { left: 32%; top: 10%; }
+  100% { left: 50%; top: 6%; }
+}
+
+@keyframes orbit-react {
+  0% { left: 68%; top: 10%; }
+  25% { left: 83%; top: 18%; }
+  50% { left: 32%; top: 10%; }
+  75% { left: 50%; top: 6%; }
+  100% { left: 68%; top: 10%; }
+}
+
+@keyframes orbit-github {
+  0% { left: 32%; top: 10%; }
+  25% { left: 50%; top: 6%; }
+  50% { left: 68%; top: 10%; }
+  75% { left: 83%; top: 18%; }
+  100% { left: 32%; top: 10%; }
+}
+
+.orbit-js {
+  animation: orbit-js 6s linear infinite;
+}
+.orbit-react {
+  animation: orbit-react 6s linear infinite;
+}
+.orbit-github {
+  animation: orbit-github 6s linear infinite;
+}

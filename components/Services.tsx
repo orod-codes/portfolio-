@@ -39,7 +39,7 @@ const Services: React.FC = () => {
               <p className="text-slate-500 dark:text-gray-400 mb-8 leading-relaxed text-sm font-light">
                 {service.description}
               </p>
-              <a href="https://t.me/yeab_neh" target="_blank" className="text-[10px] font-black uppercase tracking-[0.3em] flex items-center group-hover:translate-x-2 transition-transform text-slate-900 dark:text-white">
+              <a href="https://t.me/dorsisdevlog" target="_blank" className="text-[10px] font-black uppercase tracking-[0.3em] flex items-center group-hover:translate-x-2 transition-transform text-slate-900 dark:text-white">
                 Protocol Access <i className="fas fa-arrow-right ml-3 opacity-30 group-hover:opacity-100"></i>
               </a>
             </div>

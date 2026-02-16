@@ -3,10 +3,9 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   const socials = [
-    { icon: 'fab fa-github', href: 'https://github.com/yeabsira-mihret' },
-    { icon: 'fab fa-linkedin', href: 'https://linkedin.com/in/yeabsira-mihret' },
-    { icon: 'fab fa-behance', href: 'https://www.behance.net/yeabsiramihret' },
-    { icon: 'fab fa-x-twitter', href: 'https://x.com/yabsira_mihret' },
+    { icon: 'fab fa-github', href: 'https://github.com/orod-codes' },
+    { icon: 'fab fa-linkedin', href: 'https://www.linkedin.com/in/dorsis-girma-445001344/' },
+   
   ];
 
   return (

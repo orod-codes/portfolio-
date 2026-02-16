@@ -69,7 +69,7 @@ const Hero: React.FC = () => {
         </div>
         
         <p className="text-base sm:text-lg md:text-2xl text-slate-500 dark:text-gray-400 mb-10 md:mb-16 max-w-2xl mx-auto font-light tracking-wide leading-relaxed px-4">
-          Dorsis Girma constructs <span className="text-slate-900 dark:text-white font-bold italic">resilient infrastructures</span> and <span className="text-slate-900 dark:text-white font-bold italic">immersive interfaces</span> with surgical precision.
+          Dorsis Girma <span className="text-slate-900 dark:text-white font-bold italic">builds strong systems</span> and <span className="text-slate-900 dark:text-white font-bold italic">clean user interfaces</span> with great attention to detail.
         </p>
 
         <div className="flex flex-col gap-8 md:gap-10 justify-center items-center w-full">

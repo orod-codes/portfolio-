@@ -38,7 +38,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <p className="text-[8px] md:text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-gray-500">Secure Transmission</p>
-                  <a href="mailto:yeabsiramihret@proton.me" className="text-base md:text-xl font-bold hover:underline text-slate-900 dark:text-white truncate block max-w-[250px] md:max-w-none">yeabsiramihret@proton.me</a>
+                  <a href="mailto:girmadorsis@gmail.com" className="text-base md:text-xl font-bold hover:underline text-slate-900 dark:text-white truncate block max-w-[250px] md:max-w-none">girmadorsis@gmail.com</a>
                 </div>
               </div>
 
@@ -48,8 +48,9 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <p className="text-[8px] md:text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-gray-500">P2P Connect</p>
-                  <a href="https://t.me/yeab_neh" target="_blank" className="text-base md:text-xl font-bold hover:underline text-slate-900 dark:text-white">@yeab_neh</a>
+                  <a href="https://t.me/dorsisdevlog" target="_blank" className="text-base md:text-xl font-bold hover:underline text-slate-900 dark:text-white">@dorsisdevlog</a>
                 </div>
+                <div></div>
               </div>
             </div>
 
