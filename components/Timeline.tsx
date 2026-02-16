@@ -163,13 +163,25 @@ const Timeline: React.FC = () => {
            href="https://t.me/codewithme_tech"
            target="_blank"
            rel="noopener noreferrer"
-           className="flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-blue-600 via-cyan-500 to-indigo-600 text-white font-bold text-base uppercase tracking-widest shadow-lg border border-blue-200 dark:border-blue-900 relative overflow-hidden group hover:scale-105 transition-all duration-300"
-           style={{boxShadow: '0 4px 32px 0 rgba(0,120,255,0.10)'}}
+           className="flex items-center gap-4 px-8 py-4 rounded-full bg-gradient-to-r from-black via-gray-900 to-blue-900 text-white font-semibold text-base uppercase tracking-widest shadow-2xl border-4 border-black relative overflow-visible group hover:scale-105 transition-all duration-300"
+           style={{boxShadow: '0 12px 48px 0 rgba(0,0,0,0.28)'}}
          >
-           <span className="flex items-center justify-center w-10 h-10 mr-2 rounded-full bg-white/10 border border-blue-300 dark:border-blue-800 shadow-inner">
-             <i className="fab fa-telegram-plane text-2xl text-white group-hover:text-cyan-300 transition-colors duration-300"></i>
+           {/* Double Border Effect */}
+           <span className="pointer-events-none absolute -inset-2 rounded-full border-4 border-gray-900 z-0"></span>
+           {/* Deep Black Gradient Decor */}
+           <span className="pointer-events-none absolute -inset-1 rounded-full bg-gradient-to-r from-black via-gray-800 to-blue-900 blur-lg opacity-60 z-0"></span>
+           {/* Stronger Black Glow */}
+           <span className="pointer-events-none absolute right-2 top-2 w-20 h-20 bg-black/50 rounded-full blur-2xl opacity-50 group-hover:opacity-80 transition-all duration-500"></span>
+           {/* Layered Blue Glow */}
+           <span className="pointer-events-none absolute left-4 bottom-0 w-24 h-10 bg-blue-900/30 rounded-full blur-2xl opacity-40 z-0"></span>
+           {/* Subtle Geometric Overlay */}
+           <span className="pointer-events-none absolute left-8 top-1/2 w-10 h-10 bg-gradient-to-br from-gray-800/60 to-blue-700/40 rounded-full rotate-12 blur-md opacity-30 z-0"></span>
+           {/* Faint Pattern Overlay */}
+           <span className="pointer-events-none absolute inset-0 rounded-full z-0" style={{backgroundImage: 'radial-gradient(circle at 60% 40%, rgba(255,255,255,0.04) 0, rgba(0,0,0,0.01) 80%)'}}></span>
+           <span className="flex items-center justify-center w-12 h-12 mr-4 rounded-full bg-black/70 border-2 border-gray-800 dark:border-gray-900 shadow-inner z-10">
+             <i className="fab fa-telegram-plane text-2xl text-white group-hover:text-cyan-300 transition-colors duration-300" style={{filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.32))'}}></i>
            </span>
-           <span className="z-10 drop-shadow-sm tracking-wider">Follow my journey on Telegram</span>
+           <span className="z-10 drop-shadow-sm tracking-wider whitespace-nowrap">Follow my journey on Telegram</span>
          </a>
       </div>
     </section>
