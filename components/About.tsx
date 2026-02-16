@@ -123,17 +123,48 @@ const About: React.FC = () => {
                 ACCESS REPOS
               </button>
               <div className="flex items-center space-x-4">
-                 <div className="w-10 h-10 rounded-full border border-slate-200 dark:border-white/20 flex items-center justify-center text-slate-900 dark:text-white">
-                    <i className="fab fa-github text-lg"></i>
-                 </div>
-                 <a
-                   href="https://github.com/orod-codes"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   className="text-[10px] font-mono text-blue-600 dark:text-blue-400 hover:underline"
-                 >
-                   @orod-codes
-                 </a>
+                {/* GitHub */}
+                <a
+                  href="https://github.com/orod-codes"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                  className="w-11 h-11 min-w-[2.75rem] min-h-[2.75rem] rounded-full border border-slate-200 dark:border-white/20 flex items-center justify-center text-slate-900 dark:text-white bg-white dark:bg-slate-900 shadow-sm hover:scale-110 transition-transform"
+                >
+                  <i className="fab fa-github text-lg"></i>
+                </a>
+                {/* LinkedIn */}
+                <a
+                  href="https://www.linkedin.com/in/dorsis-girma/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  className="w-11 h-11 min-w-[2.75rem] min-h-[2.75rem] rounded-full border border-[#0A66C2] flex items-center justify-center text-[#0A66C2] bg-white shadow-sm hover:scale-110 transition-transform"
+                >
+                  <i className="fab fa-linkedin-in text-lg"></i>
+                </a>
+                {/* Telegram */}
+                <a
+                  href="https://t.me/codewithme_tech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Telegram"
+                  className="w-11 h-11 min-w-[2.75rem] min-h-[2.75rem] rounded-full border border-[#229ED9] flex items-center justify-center text-[#229ED9] bg-white shadow-sm hover:scale-110 transition-transform"
+                >
+                  <i className="fab fa-telegram-plane text-lg"></i>
+                </a>
+                {/* Phone */}
+                <a
+                  href="tel:+251955385937"
+                  aria-label="Phone"
+                  className="flex items-center gap-2 group"
+                  style={{ textDecoration: 'none' }}
+                >
+                  <span className="w-11 h-11 min-w-[2.75rem] min-h-[2.75rem] rounded-full border border-green-400 flex items-center justify-center text-green-600 bg-white shadow-sm group-hover:scale-110 transition-transform">
+                    <i className="fas fa-phone-alt text-lg"></i>
+                  </span>
+                  <span className="font-bold text-white text-lg md:text-xl select-text group-hover:underline">+251955385937</span>
+                </a>
               </div>
             </div>
           </div>
