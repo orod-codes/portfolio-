@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Project } from '../types';
 
 interface ProjectModalProps {
@@ -8,6 +8,21 @@ interface ProjectModalProps {
 }
 
 const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
+  const images = useMemo(() => (project.images && project.images.length > 0 ? project.images : [project.image]), [project]);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    setCurrentImageIndex(0);
+  }, [project]);
+
+  const showNext = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const showPrev = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-10">
       <div 
@@ -24,12 +39,40 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
         </button>
 
         <div className="grid md:grid-cols-2">
-          <div className="h-64 md:h-full">
+          <div className="h-64 md:h-full bg-slate-50 dark:bg-black/20 relative">
             <img 
-              src={project.image} 
+              src={images[currentImageIndex]} 
               alt={project.title} 
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain p-3"
             />
+            {images.length > 1 && (
+              <>
+                <button
+                  onClick={showPrev}
+                  className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 text-white hover:bg-black/80 transition-colors"
+                  aria-label="Previous image"
+                >
+                  <i className="fas fa-chevron-left"></i>
+                </button>
+                <button
+                  onClick={showNext}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 text-white hover:bg-black/80 transition-colors"
+                  aria-label="Next image"
+                >
+                  <i className="fas fa-chevron-right"></i>
+                </button>
+                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2">
+                  {images.map((_, index) => (
+                    <button
+                      key={`${project.id}-image-${index}`}
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={`w-2.5 h-2.5 rounded-full transition-colors ${currentImageIndex === index ? 'bg-white' : 'bg-white/40'}`}
+                      aria-label={`Go to image ${index + 1}`}
+                    />
+                  ))}
+                </div>
+              </>
+            )}
           </div>
           
           <div className="p-8 md:p-12">
@@ -69,11 +112,22 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
             )}
 
             <div className="flex gap-4">
-              <button className="bg-slate-900 dark:bg-white text-white dark:text-black px-8 py-3 rounded-full font-bold hover:scale-105 transition-all uppercase tracking-widest text-xs">
-                Live Demo
-              </button>
+              {project.liveUrl ? (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center bg-slate-900 dark:bg-white text-white dark:text-black px-8 py-3 rounded-full font-bold hover:scale-105 transition-all uppercase tracking-widest text-xs"
+                >
+                  Live Demo
+                </a>
+              ) : (
+                <button className="bg-slate-400 dark:bg-white/30 text-white dark:text-white/80 px-8 py-3 rounded-full font-bold uppercase tracking-widest text-xs cursor-not-allowed" disabled>
+                  Live Demo
+                </button>
+              )}
               <button className="border-2 border-slate-900 dark:border-white px-8 py-3 rounded-full font-bold hover:bg-slate-900 dark:hover:bg-white hover:text-white dark:hover:text-black transition-all uppercase tracking-widest text-xs text-slate-900 dark:text-white">
-                Case Study
+                Case Studies
               </button>
             </div>
           </div>

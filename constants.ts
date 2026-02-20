@@ -1,5 +1,7 @@
 
 import { Project, Experience, Skill, Service, Poster } from './types';
+import bunaAdminDashboardImage from './picture/image copy.png';
+import bunaHomepageImage from './picture/image.png';
 
 export const SERVICES: Service[] = [
   { id: 1, title: 'Full-Stack Web Dev', description: 'Architecting end-to-end web applications with modern frameworks like React and Node.js.', icon: 'fa-code' },
@@ -36,14 +38,24 @@ export const EXPERIENCES: Experience[] = [
 export const PROJECTS: Project[] = [
   {
     id: 1,
-    title: 'ADWA System Platform',
-    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop',
-    description: 'A robust system for real-time monitoring and challenge management in high-load environments.',
-    tags: ['Systems', 'Real-time', 'React'],
-    category: 'System',
-    features: ['Low-latency processing', 'Concurrent user management', 'Distributed data sync'],
-    techStack: ['Node.js', 'Socket.io', 'PostgreSQL'],
-    achievements: ['99.9% uptime during peak load', 'Horizontal scaling enabled']
+    title: 'Buna Scholarship Platform',
+    image: bunaHomepageImage,
+    images: [bunaHomepageImage, bunaAdminDashboardImage],
+    liveUrl: 'https://bunasm.com/',
+    description: 'A full scholarship management platform for Buna Scholarship, including public scholarship discovery and an internal admin dashboard for operations.',
+    tags: ['Web', 'Admin Panel', 'Education'],
+    category: 'Web',
+    features: [
+      'Student application intake and scholarship listing management',
+      'Role-based admin workflows for students, applications, and reports',
+      'Content and communication modules for blogs, notifications, and documents'
+    ],
+    techStack: ['React', 'TypeScript', 'Node.js', 'MongoDB'],
+    achievements: [
+      'Unified public website and internal dashboard experience',
+      'Improved admin visibility with quick-action and activity views',
+      'Live production deployment at bunasm.com'
+    ]
   },
   {
     id: 2,

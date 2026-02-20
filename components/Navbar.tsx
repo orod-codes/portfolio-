@@ -15,13 +15,22 @@ const Navbar: React.FC<NavbarProps> = ({ theme, onToggleTheme }) => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 100);
       
-      const sections = ['home', 'about', 'tech-stack', 'services', 'projects', 'contact'];
+      const sections = ['home', 'about', 'tech-stack', 'services', 'timeline', 'projects', 'contact'];
+      const sectionLabels: Record<string, string> = {
+        home: 'Home',
+        about: 'About',
+        'tech-stack': 'Stack',
+        services: 'Services',
+        timeline: 'PROTOCOL_PATH',
+        projects: 'Case Studies',
+        contact: 'Contact',
+      };
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
           const rect = element.getBoundingClientRect();
           if (rect.top <= 200 && rect.bottom >= 200) {
-            setActiveSection(section.replace('-', ' ').charAt(0).toUpperCase() + section.replace('-', ' ').slice(1));
+            setActiveSection(sectionLabels[section] || 'Home');
             break;
           }
         }
@@ -37,7 +46,8 @@ const Navbar: React.FC<NavbarProps> = ({ theme, onToggleTheme }) => {
     { name: 'About', href: '#about', icon: 'fa-user' },
     { name: 'Stack', href: '#tech-stack', icon: 'fa-layer-group' },
     { name: 'Services', href: '#services', icon: 'fa-microchip' },
-    { name: 'Projects', href: '#projects', icon: 'fa-code-branch' },
+    { name: 'PROTOCOL_PATH', href: '#timeline', icon: 'fa-route' },
+    { name: 'Case Studies', href: '#projects', icon: 'fa-code-branch' },
     { name: 'Contact', href: '#contact', icon: 'fa-paper-plane' },
   ];
 

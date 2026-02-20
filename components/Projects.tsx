@@ -37,31 +37,34 @@ const Projects: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {filteredProjects.map((project) => (
-            <div 
-              key={project.id} 
-              className="group cursor-pointer"
-              onClick={() => setSelectedProject(project)}
-            >
-              <div className="relative aspect-[4/5] glass rounded-[2.5rem] overflow-hidden mb-8 border border-slate-100 dark:border-white/5 bg-white/50 dark:bg-white/5">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 dark:from-black via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
-                <div className="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+          {filteredProjects.map((project) => {
+            const previewImage = project.images?.[0] || project.image;
+            return (
+              <div
+                key={project.id}
+                className="group cursor-pointer"
+                onClick={() => setSelectedProject(project)}
+              >
+                <div className="relative aspect-[4/5] glass rounded-[2.5rem] overflow-hidden mb-8 border border-slate-100 dark:border-white/5 bg-white/50 dark:bg-white/5">
+                  <img
+                    src={previewImage}
+                    alt={project.title}
+                    className="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-1000 opacity-90 group-hover:opacity-100"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 dark:from-black via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+                  <div className="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     <span className="text-[10px] font-black uppercase tracking-[0.2em] bg-white/20 backdrop-blur-md px-3 py-1 rounded-full mb-4 inline-block border border-white/20 text-white">
                       {project.category}
                     </span>
                     <h3 className="text-3xl font-black mb-2 text-white">{project.title}</h3>
-                </div>
-                <div className="absolute top-8 right-8 w-12 h-12 glass rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all border-white/20 group-hover:rotate-45 text-white">
-                   <i className="fas fa-arrow-up-right"></i>
+                  </div>
+                  <div className="absolute top-8 right-8 w-12 h-12 glass rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all border-white/20 group-hover:rotate-45 text-white">
+                    <i className="fas fa-arrow-up-right"></i>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 

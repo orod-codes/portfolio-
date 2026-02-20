@@ -69,7 +69,7 @@ const TECH_GROUPS = [
     sections: [
       {
         label: 'Frontend Frameworks',
-        items: ['React', 'Next.js', 'Vue.js', 'Angular', 'Svelte']
+        items: ['React', 'Next.js']
       },
       {
         label: 'Styling Systems',
@@ -84,11 +84,11 @@ const TECH_GROUPS = [
     sections: [
       {
         label: 'Backend Languages',
-        items: ['JavaScript (Node.js)', 'Python', 'Java', 'PHP', 'C#', 'Go', 'Ruby']
+        items: ['JavaScript (Node.js)', 'Python', 'Java', 'PHP', 'Ruby']
       },
       {
         label: 'Backend Frameworks',
-          items: ['Express.js', 'NestJS', 'Django', 'Flask', 'Spring Boot', 'Laravel']
+          items: ['Express.js', 'NestJS', 'Django', 'Spring Boot', 'Laravel']
       }
     ]
   },
@@ -99,11 +99,11 @@ const TECH_GROUPS = [
     sections: [
       {
         label: 'SQL (Relational)',
-        items: ['MySQL', 'PostgreSQL', 'Microsoft SQL Server']
+        items: ['MySQL', 'PostgreSQL']
       },
       {
         label: 'NoSQL',
-        items: ['MongoDB', 'Firebase Firestore', 'Redis']
+        items: ['MongoDB', 'Firebase Firestore']
       }
     ]
   },
@@ -134,7 +134,7 @@ const TECH_GROUPS = [
       },
       {
         label: 'Languages',
-        items: ['Dart', 'Java (Android)', 'Kotlin', 'Swift']
+        items: ['Java (Android)', 'Kotlin']
       },
       {
         label: 'Tools',
